@@ -1,12 +1,6 @@
-// your-app-name/src/fetchGraphQL.js
-async function fetchGraphQL(text, variables) {
-  const REACT_APP_GITHUB_AUTH_TOKEN = process.env.REACT_APP_GITHUB_AUTH_TOKEN;
-  if (!REACT_APP_GITHUB_AUTH_TOKEN) {
-    console.error(
-      'No GitHub auth token found. Follow the directions here: https://relay.dev/docs/getting-started/step-by-step-guide/#21-github-graphql-authentication'
-    );
-  }
+import REACT_APP_GITHUB_AUTH_TOKEN from './your-github-token';
 
+async function fetchGraphQL(text, variables) {
   // Fetch data from GitHub's GraphQL API:
   const response = await fetch('https://api.github.com/graphql', {
     method: 'POST',
