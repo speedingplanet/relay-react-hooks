@@ -1,8 +1,11 @@
+import RefreshingQueries from './demos/RefreshingQueries';
+import RefreshingFragments from './demos/RefreshingFragments';
 import ExternalQuery from './external-query/ExternalQuery';
 import FragmentExample from './FragmentExample';
 import LazyLoad from './LazyLoadExample';
 import QueryLoaderExample from './QueryLoaderExample';
 import VariablesExample from './VariablesExample';
+import RepoPagination from './demos/RepoPagination';
 
 const routes = [
   {
@@ -29,6 +32,21 @@ const routes = [
     label: 'Variables',
     url: '/queries/variables',
     component: VariablesExample,
+  },
+  {
+    label: 'Refreshing Queries',
+    url: '/queries/refreshing',
+    component: RefreshingQueries,
+  },
+  {
+    label: 'Refreshing Fragments',
+    url: '/queries/refreshing-fragments',
+    component: RefreshingFragments,
+  },
+  {
+    label: 'Pagination',
+    url: '/pagination/repo-pagination',
+    component: RepoPagination,
   },
 ];
 

@@ -6,6 +6,7 @@
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^13.5.0",
+    "msw": "^0.36.4",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-relay": "^13.0.1",
@@ -41,7 +42,9 @@
   },
   "devDependencies": {
     "babel-plugin-relay": "^13.0.1",
-    "relay-compiler": "^13.0.1"
+    "react-test-renderer": "^17.0.2",
+    "relay-compiler": "^13.0.1",
+    "relay-test-utils": "^13.0.1"
   },
   "engines": {
     "node": ">=14 <18",
