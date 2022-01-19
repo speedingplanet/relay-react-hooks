@@ -1,5 +1,5 @@
 /**
- * @generated SignedSource<<b1538ddafaa1ef22af0d1fd6217e83db>>
+ * @generated SignedSource<<9a07b33accc93aa7fc77e05a8c714f47>>
  * @flow
  * @lightSyntaxTransform
  * @nogrep
@@ -17,6 +17,7 @@ export type FragmentExampleQueryVariables = FragmentExampleQuery$variables;
 export type FragmentExampleQuery$data = {|
   +user: ?{|
     +organizations: {|
+      +totalCount: number,
       +nodes: ?$ReadOnlyArray<?{|
         +name: ?string,
       |}>,
@@ -50,10 +51,17 @@ v2 = {
   "alias": null,
   "args": null,
   "kind": "ScalarField",
-  "name": "name",
+  "name": "totalCount",
   "storageKey": null
 },
 v3 = {
+  "alias": null,
+  "args": null,
+  "kind": "ScalarField",
+  "name": "name",
+  "storageKey": null
+},
+v4 = {
   "alias": null,
   "args": null,
   "kind": "ScalarField",
@@ -88,6 +96,7 @@ return {
             "name": "organizations",
             "plural": false,
             "selections": [
+              (v2/*: any*/),
               {
                 "alias": null,
                 "args": null,
@@ -96,7 +105,7 @@ return {
                 "name": "nodes",
                 "plural": true,
                 "selections": [
-                  (v2/*: any*/)
+                  (v3/*: any*/)
                 ],
                 "storageKey": null
               }
@@ -124,7 +133,7 @@ return {
         "name": "user",
         "plural": false,
         "selections": [
-          (v2/*: any*/),
+          (v3/*: any*/),
           {
             "alias": null,
             "args": null,
@@ -140,6 +149,7 @@ return {
             "name": "organizations",
             "plural": false,
             "selections": [
+              (v2/*: any*/),
               {
                 "alias": null,
                 "args": null,
@@ -148,32 +158,32 @@ return {
                 "name": "nodes",
                 "plural": true,
                 "selections": [
-                  (v2/*: any*/),
-                  (v3/*: any*/)
+                  (v3/*: any*/),
+                  (v4/*: any*/)
                 ],
                 "storageKey": null
               }
             ],
             "storageKey": "organizations(first:5)"
           },
-          (v3/*: any*/)
+          (v4/*: any*/)
         ],
         "storageKey": "user(login:\"sindresorhus\")"
       }
     ]
   },
   "params": {
-    "cacheID": "2e0192e8d48d2471aff79a122fdfac3c",
+    "cacheID": "0e8fddff1baeb10bcdaf32f3ba2af4fe",
     "id": null,
     "metadata": {},
     "name": "FragmentExampleQuery",
     "operationKind": "query",
-    "text": "query FragmentExampleQuery {\n  user(login: \"sindresorhus\") {\n    ...FragmentExample\n    organizations(first: 5) {\n      nodes {\n        name\n        id\n      }\n    }\n    id\n  }\n}\n\nfragment FragmentExample on User {\n  name\n  email\n}\n"
+    "text": "query FragmentExampleQuery {\n  user(login: \"sindresorhus\") {\n    ...FragmentExample\n    organizations(first: 5) {\n      totalCount\n      nodes {\n        name\n        id\n      }\n    }\n    id\n  }\n}\n\nfragment FragmentExample on User {\n  name\n  email\n}\n"
   }
 };
 })();
 
-(node/*: any*/).hash = "696a6099ae238340edaefa55bffcb552";
+(node/*: any*/).hash = "ff4df05f09dd6ee83099f27205ff0801";
 
 module.exports = ((node/*: any*/)/*: Query<
   FragmentExampleQuery$variables,
