@@ -40,7 +40,7 @@ const RepoPagination = () => {
       <div className="card-body">
         <button
           className="btn btn-primary"
-          onClick={() => loadQuery({ count: 10 })}
+          onClick={() => loadQuery({ count: 2 })}
         >
           Load Repos
         </button>
@@ -90,7 +90,8 @@ const ReposListComponent = ({ user }) => {
         })}
       </ul>
       <div>
-        <button className="btn btn-secondary" onClick={() => loadNext(10)}>
+        {/* loadNext($count) -> repositories(first:$count, after:"[stored interally by Relay]") */}
+        <button className="btn btn-secondary" onClick={() => loadNext(2)}>
           Load more repos!
         </button>
       </div>
